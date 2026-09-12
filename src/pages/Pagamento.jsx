@@ -9,9 +9,9 @@ function Pagamento() {
         <h1 id="payment-title" className="checkout-panel__title">
           Pagamento
         </h1>
-        <div className="payment-page__form-area" aria-label="Dados de pagamento">
-          <h2>Dados de pagamento</h2>
-        </div>
+        <section className="payment-page__form-area" aria-labelledby="payment-details-title">
+          <h2 id="payment-details-title">Dados de pagamento</h2>
+        </section>
         <Link className="checkout-page__link" to="/">
           Voltar ao carrinho
         </Link>
