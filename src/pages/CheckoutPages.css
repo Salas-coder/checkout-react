@@ -119,6 +119,11 @@
   background: #1d4ed8;
 }
 
+.payment-form__submit:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
 .payment-form__submit:focus-visible {
   outline: 3px solid #93c5fd;
   outline-offset: 2px;
