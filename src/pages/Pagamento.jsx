@@ -21,7 +21,7 @@ const pagamentoSchema = z.object({
 });
 
 function Pagamento() {
-  const { finalizarPagamento } = usePagamento();
+  const { finalizarPagamento, processando } = usePagamento();
   const {
     register,
     handleSubmit,
@@ -36,8 +36,8 @@ function Pagamento() {
     },
   });
 
-  const enviarPagamento = ({ cartao }) => {
-    finalizarPagamento(cartao);
+  const enviarPagamento = async ({ cartao }) => {
+    await finalizarPagamento(cartao);
   };
 
   return (
@@ -120,8 +120,8 @@ function Pagamento() {
               </div>
             </div>
 
-            <button className="payment-form__submit" type="submit">
-              Finalizar compra
+            <button className="payment-form__submit" type="submit" disabled={processando}>
+              {processando ? "Processando compra…" : "Finalizar compra"}
             </button>
           </form>
         </section>
