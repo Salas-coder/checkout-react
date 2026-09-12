@@ -8,13 +8,13 @@ function Carrinho() {
     <main>
       <h1>Carrinho de compras</h1>
 
-      <section aria-label="Produtos do carrinho">
+      <section className="cart-page__items" aria-label="Produtos do carrinho">
         {produtos.map((produto) => (
           <ItemCarrinho key={produto.id} produto={produto} />
         ))}
       </section>
 
-      <section aria-label="Resumo da compra">
+      <section className="cart-page__summary" aria-label="Resumo da compra">
         <ResumoCompra produtos={produtos} />
       </section>
     </main>
