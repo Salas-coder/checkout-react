@@ -52,6 +52,78 @@
   font-size: 1.125rem;
 }
 
+.payment-form {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.payment-form__field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.payment-form__field label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.payment-form__field input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.payment-form__field input:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid #93c5fd;
+  outline-offset: 1px;
+}
+
+.payment-form__field input[aria-invalid="true"] {
+  border-color: #b91c1c;
+}
+
+.payment-form__fields-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.payment-form__error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.payment-form__submit {
+  min-height: 2.75rem;
+  margin-top: var(--space-1);
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.payment-form__submit:hover {
+  background: #1d4ed8;
+}
+
+.payment-form__submit:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
 .checkout-page__link {
   display: inline-flex;
   min-height: 2.75rem;
@@ -85,5 +157,9 @@
 
   .checkout-panel {
     padding: var(--space-3);
+  }
+
+  .payment-form__fields-row {
+    grid-template-columns: 1fr;
   }
 }
