@@ -321,12 +321,6 @@ Algumas melhorias que poderiam ser implementadas futuramente:
 
 ---
 
-## 📋 Trello
-
-Quadro utilizado para organização das tarefas:
-
-> 🔗 **Adicionar aqui o link do Trello**
-
 ---
 
 ## 🎥 Vídeo de apresentação
