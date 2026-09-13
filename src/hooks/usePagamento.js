@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const cartaoComDigitosIguais = /^(\d)\1{15}$/;
+const normalizarCartao = (valor) => String(valor ?? "").replace(/[\s-]/g, "");
 const aguardarProcessamento = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
 function usePagamento() {
@@ -9,7 +10,7 @@ function usePagamento() {
   const [processando, setProcessando] = useState(false);
   const processandoRef = useRef(false);
 
-  const finalizarPagamento = async (cartaoNormalizado) => {
+  const finalizarPagamento = async (cartao) => {
     if (processandoRef.current) {
       return;
     }
@@ -20,7 +21,8 @@ function usePagamento() {
     try {
       await aguardarProcessamento();
 
-      const destino = cartaoComDigitosIguais.test(cartaoNormalizado)
+      const cartaoLimpo = normalizarCartao(cartao);
+      const destino = cartaoComDigitosIguais.test(cartaoLimpo)
         ? "/falha"
         : "/sucesso";
 
