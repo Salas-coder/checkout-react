@@ -327,7 +327,7 @@ Algumas melhorias que poderiam ser implementadas futuramente:
 
 Vídeo de apresentação do projeto:
 
-> 🎬 **Adicionar aqui o link do vídeo**
+> 🎬 **https://drive.google.com/file/d/1JEbkcWdi9amcQEAsn61eRJ5Ae6B8ZDAh/view?usp=sharing**
 
 ---
 
